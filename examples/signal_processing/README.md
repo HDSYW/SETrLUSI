@@ -1,4 +1,4 @@
-# SETrLUSI B9 MATLAB demo
+# Signal-processing experiment demo
 
 This demo runs the existing SETrLUSI implementation using the historical experimental protocol. It does not read accuracy values from spreadsheets or adjust predictions to match manuscript tables. Exact agreement with the manuscript results has not been verified.
 
@@ -55,6 +55,6 @@ Required software includes MATLAB (the existing project uses R2021b), Statistics
 
 ## Repository integration
 
-This supplement leaves `Running_SETrLUSI.m` and all existing model/tool files unchanged. Gas-specific model, solver, multiclass split, predicate, and loading functions are isolated in `support/`. These functions are placed first on the MATLAB path only while the demo runs. The previous MATLAB path is restored on exit. Existing LIBSVM and LIBLINEAR MEX binaries are reused.
+The original synthetic and UCI experiments are organized separately in `../synthetic_uci/`. Their experiment script and the shared model/tool files are unchanged. Gas-specific model, solver, multiclass split, predicate, and loading functions are isolated in this folder's `support/` directory. These functions are placed first on the MATLAB path only while the demo runs. The previous MATLAB path is restored on exit. Existing LIBSVM and LIBLINEAR MEX binaries are reused.
 
 See `data/README.md` for dataset attribution and citations.
